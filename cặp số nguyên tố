@@ -15,7 +15,6 @@ void check(x n){
 			break;
 		} 
 	}
-	return;
 }
 int main(){
 	x t;cin>>t;
