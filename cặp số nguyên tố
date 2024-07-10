@@ -12,6 +12,7 @@ void check(x n){
 	for(x i=0;i<=n/2;i++){
 		if(nt(i)&&nt(n-i)){
 			cout<<i<<" "<<n-i<<endl;
+			break;
 		} 
 	}
 	return;
