@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 #define x long long
 using namespace std;
-x const maxn=1e7;
+x const maxn=1e13;
 x nt[maxn];
 int main(){
 	memset(nt,true,sizeof(nt));
