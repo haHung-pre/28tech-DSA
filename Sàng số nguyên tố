@@ -1,20 +1,19 @@
 #include<bits/stdc++.h>
-#define x long long
 using namespace std;
-x const maxn=1e6;
+int const maxn=1e6;
 int nt[maxn+1];
 int main(){
 	memset(nt,true,sizeof(nt));
 	nt[0]=nt[1]=0;
-	for(x i=2;i<=sqrt(maxn+1);i++){
+	for(int i=2;i<=sqrt(maxn+1);i++){
 		if(nt[i]){
-			for(x j=i*i;j<=maxn+1;j+=i){
+			for(int j=i*i;j<=maxn+1;j+=i){
 				nt[j]=0;
 			}
 		}
 	}
-	x n;cin>>n;
-	for(x i=2;i<=n;i++){
+	int n;cin>>n;
+	for(int i=2;i<=n;i++){
 		if(nt[i]) cout<<i<<" "; 
 	}
 }
