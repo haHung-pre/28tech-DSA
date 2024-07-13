@@ -1,14 +1,14 @@
 #include<bits/stdc++.h>
 #define x long long
 using namespace std;
-x const maxn=1e7;
-int nt[maxn];
+x const maxn=1e6;
+int nt[maxn+1];
 int main(){
 	memset(nt,true,sizeof(nt));
 	nt[0]=nt[1]=0;
-	for(x i=2;i<=sqrt(maxn);i++){
+	for(x i=2;i<=sqrt(maxn+1);i++){
 		if(nt[i]){
-			for(x j=i*i;j<=maxn;j+=i){
+			for(x j=i*i;j<=maxn+1;j+=i){
 				nt[j]=0;
 			}
 		}
