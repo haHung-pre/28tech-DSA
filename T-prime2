@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-int const maxn=1e7;
+int const maxn=1e6;
 int nt[maxn];
 int main(){
 	memset(nt,true,sizeof(nt));
