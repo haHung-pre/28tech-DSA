@@ -1,25 +1,26 @@
 #include<bits/stdc++.h>
 using namespace std;
 int const maxn=1e6;
-int nt[maxn];
-int main(){
+bool nt[maxn+1];
+void sieve(){
 	memset(nt,true,sizeof(nt));
 	nt[0]=nt[1]=false;
-	for(int i=2;i<=sqrt(maxn);i++){
-		if(nt[i]){
-		for(int j=i*i;j<=maxn;j+=i){
+	for(int i=2;i<=sqrt(maxn+1);i++){
+		for(int j=i*i;j<=maxn+1;j+=i){
 			nt[j]=false;
 		}
 	}
-	}
+}
+#define ll long long
+int main(){
 	int t;cin>>t;
+	sieve();
 	while(t--){
-		int n;cin>>n;int c=0;
+		ll n;cin>>n;
+		int c=0;
 		for(int i=2;i<=sqrt(n);i++){
-			if(nt[i]){
-				c++;
+			if(nt[i]) c++;
 		}
-	}
-	cout<<c<<endl;
+		cout<<c<<endl;
 	}
 }
