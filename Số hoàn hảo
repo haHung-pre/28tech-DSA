@@ -11,7 +11,7 @@ using ll=long long;
 ll hh[10];
 int c=0;
 void init(){
-	for(int p=1;p<=32;p++){
+	for(int p=2;p<=32;p++){
 		if(nt(p)){
 			int tmp=(int)pow(2,p)-1;
 			if(nt(tmp)){
@@ -33,8 +33,7 @@ int main(){
 				break;
 			} 
 		}
-		if(ok==1) cout<<"YES\n";
+		if(ok) cout<<"YES\n";
 		else cout<<"NO\n";
 	}
 }
-
